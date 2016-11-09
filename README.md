@@ -19,10 +19,8 @@ AlertController(
     title: "test",
     message: "message desu"
     )
-    .addDefaultStyleAction(
-        title: "OK",
-        handler: { (action) -> Void in
-            print("OK")
+    .addDefaultStyleAction(title: "OK", handler: { (action) -> Void in
+        print("OK")
     })
     .addCancelStyleAction(title: "Cancel")
     .show()
@@ -33,10 +31,8 @@ ActionSheetController(
     title: "test",
     message: "message desu"
     )
-    .addDefaultStyleAction(
-        title: "OK",
-        handler: { (action) -> Void in
-            print("OK")
+    .addDefaultStyleAction(title: "OK", handler: { (action) -> Void in
+        print("OK")
     })
     .addCancelStyleAction(title: "Cancel")
     .setSourceRect(myRect)

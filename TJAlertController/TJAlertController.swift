@@ -45,24 +45,39 @@ public struct AlertController {
         self.alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     }
     
+    /**
+     Add UIAlertAction to alert
+     */
     public func addAction(title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)? = nil) -> AlertController {
         let action = UIAlertAction(title: title, style: style, handler: handler)
         alert.addAction(action)
         return self
     }
     
+    /**
+     Add UIAlertAction (UIAlertActionStyle is .cancel) to alert
+     */
     public func addCancelStyleAction(title: String?, handler: ((UIAlertAction) -> Void)? = nil) -> AlertController {
         return addAction(title: title, style: .cancel, handler: handler)
     }
     
+    /**
+     Add UIAlertAction (UIAlertActionStyle is .default) to alert
+     */
     public func addDefaultStyleAction(title: String?, handler: ((UIAlertAction) -> Void)? = nil) -> AlertController {
         return addAction(title: title, style: .default, handler: handler)
     }
 
+    /**
+     Add UIAlertAction (UIAlertActionStyle is .destructive) to alert
+     */
     public func addDestructiveStyleAction(title: String?, handler: ((UIAlertAction) -> Void)? = nil) -> AlertController {
         return addAction(title: title, style: .destructive, handler: handler)
     }
     
+    /**
+     present alert
+     */
     public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
         target.present(self.alert, animated: animated, completion: nil)
     }
@@ -97,24 +112,39 @@ public struct ActionSheetController {
         self.alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
     }
     
+    /**
+     Add UIAlertAction to alert
+     */
     public func addAction(title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) -> ActionSheetController {
         let action = UIAlertAction(title: title, style: style, handler: handler)
         alert.addAction(action)
         return self
     }
     
+    /**
+     Add UIAlertAction (UIAlertActionStyle is .cancel) to alert
+     */
     public func addCancelStyleAction(title: String?, handler: ((UIAlertAction) -> Void)? = nil) -> ActionSheetController {
         return addAction(title: title, style: .cancel, handler: handler)
     }
     
+    /**
+     Add UIAlertAction (UIAlertActionStyle is .default) to alert
+     */
     public func addDefaultStyleAction(title: String?, handler: ((UIAlertAction) -> Void)? = nil) -> ActionSheetController {
         return addAction(title: title, style: .default, handler: handler)
     }
     
+    /**
+     Add UIAlertAction (UIAlertActionStyle is .destructive) to alert
+     */
     public func addDestructiveStyleAction(title: String?, handler: ((UIAlertAction) -> Void)? = nil) -> ActionSheetController {
         return addAction(title: title, style: .destructive, handler: handler)
     }
     
+    /**
+     present alert
+     */
     public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
         target.present(self.alert, animated: animated, completion: nil)
     }
